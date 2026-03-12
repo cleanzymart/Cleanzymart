@@ -91,6 +91,22 @@ router.get('/:id', async (req, res) => {
   } finally {
     if (connection) connection.release();
   }
+ CheckifServiceexits
+});
+
+ // Check if service exists
+    const [existing] = await connection.execute(
+      'SELECT id FROM services WHERE id = ?',
+      [serviceId]
+    );
+   
+    if (existing.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: 'Service not found'
+      });
+    }
+
  GetServicesCategory
 });
 
@@ -99,4 +115,5 @@ router.get('/:id', async (req, res) => {
 
 
 module.exports = router;
+ main
  main
