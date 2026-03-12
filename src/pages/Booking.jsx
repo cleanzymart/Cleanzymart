@@ -165,6 +165,7 @@ const Booking = () => {
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toISOString().split('T')[0];
   };
+  
 
   return (
     <div className="min-h-screen bg-[#f6f8f6]">
@@ -205,7 +206,7 @@ const Booking = () => {
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-lg p-8">
           {step === 1 && (
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Choose a Service</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Select a Service</h2>
               <div className="space-y-4">
                 {services.map((service) => (
                   <div 

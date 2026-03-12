@@ -51,6 +51,7 @@ const AboutUs = () => {
             <div className="w-full max-w-4xl mx-auto h-64 bg-gray-200 rounded-xl flex items-center justify-center">
               <img 
                 className="w-full max-w-4xl rounded-xl object-cover h-64" 
+                // add image to aboutus
                 src="/images/Aboutus.jpg"  
                 alt="Clean laundry service" 
               />
