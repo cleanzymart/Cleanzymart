@@ -106,6 +106,7 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/invites', inviteRoutes);
 app.use('/api/payments', paymentRoutes);
+app.use('/api/services', serviceRoutes);
 
 
 // Create tables function
