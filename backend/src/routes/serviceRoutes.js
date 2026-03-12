@@ -31,3 +31,16 @@ router.get('/category/:category', async (req, res) => {
     if (connection) connection.release();
   }
 });
+
+ // Check if service exists
+    const [existing] = await connection.execute(
+      'SELECT id FROM services WHERE id = ?',
+      [serviceId]
+    );
+   
+    if (existing.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: 'Service not found'
+      });
+    }
