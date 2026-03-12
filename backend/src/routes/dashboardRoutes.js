@@ -9,7 +9,7 @@ router.get('/customer-stats', authMiddleware.protect, async (req, res) => {
   try {
     const userId = req.user.id;
     
-    connection = await pool.getConnection();
+    connection= await pool.getConnection();
     
     // Check if orders table exists
     const [tables] = await connection.execute(`SHOW TABLES LIKE 'orders'`);
