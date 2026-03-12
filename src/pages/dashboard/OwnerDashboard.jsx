@@ -60,7 +60,7 @@ const OwnerDashboard = () => {
     }
   };
 
-  // Navigation Handlers
+  // Navigation Handler
   const handleNavigation = (tab, path) => {
     setActiveTab(tab);
     navigate(path);
