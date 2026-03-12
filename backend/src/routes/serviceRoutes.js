@@ -47,24 +47,10 @@ router.get('/:id', async (req, res) => {
   let connection;
   try {
     const serviceId = req.params.id;
- main
    
     connection = await pool.getConnection();
    
     const [services] = await connection.execute(
- GetServicesCategory
-      'SELECT * FROM services WHERE category = ? AND is_active = TRUE ORDER BY name',
-      [category]
-    );
-   
-    res.json({
-      success: true,
-      data: { services }
-    });
-   
-  } catch (error) {
-    console.error('Get services by category error:', error);
-
       'SELECT * FROM services WHERE id = ?',
       [serviceId]
     );
@@ -83,7 +69,6 @@ router.get('/:id', async (req, res) => {
    
   } catch (error) {
     console.error('Get service error:', error);
- main
     res.status(500).json({
       success: false,
       error: error.message
@@ -91,7 +76,6 @@ router.get('/:id', async (req, res) => {
   } finally {
     if (connection) connection.release();
   }
- CheckifServiceexits
 });
 
  // Check if service exists
@@ -115,5 +99,3 @@ router.get('/:id', async (req, res) => {
 
 
 module.exports = router;
- main
- main
