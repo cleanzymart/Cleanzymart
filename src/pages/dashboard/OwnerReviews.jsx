@@ -53,7 +53,7 @@ const OwnerReviews = () => {
       <h2 className="text-2xl font-bold mb-6">Pending Reviews</h2>
 
       {pendingReviews.length === 0 ? (
-        <p className="text-gray-500 text-center py-8">No pending reviews</p>
+        <p className="text-gray-500 text-center py-8">No pending reviews yet</p>
       ) : (
         <div className="space-y-4">
           {pendingReviews.map((review) => (
