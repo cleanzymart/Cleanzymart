@@ -6,6 +6,8 @@ const reviewRoutes = require('./src/routes/reviewRoutes');
 const orderRoutes = require('./src/routes/orderRoutes');
 const inviteRoutes = require('./src/routes/inviteRoutes');
 const paymentRoutes = require('./src/routes/paymentRoutes');
+const serviceRoutes = require('./src/routes/serviceRoutes');
+
 require('dotenv').config();
 
 const app = express();
